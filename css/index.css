@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  height: 100%;
   font-family: "Montserrat", sans-serif;
   color: #fff;
   min-height: 100dvh;
@@ -20,10 +21,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  height: 100dvh;
   background: url("../1613717704_2-p-krasivii-fon-dlya-internet-magazina-2.jpg")
     center/cover no-repeat;
-  z-index: -2;
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* header */
