@@ -110,6 +110,23 @@ h1 {
   transition: box-shadow 0.3s ease;
 }
 
+.left {
+  position: absolute;
+  left: 20px;
+}
+
+@media (max-width: 480px) {
+  .viber-link {
+    padding: 14px 10px;
+
+    justify-content: end;
+  }
+
+  .viber-link span {
+    margin-right: 40px;
+  }
+}
+
 .viber-link::after {
   content: "";
   position: absolute;
@@ -124,16 +141,16 @@ h1 {
   background: rgba(255, 255, 255, 0.05); /* светлый слой при наведении */
 }
 
-.viber-link span,
-.viber-link img {
-  position: relative;
-  z-index: 1; /* чтобы текст и иконка были поверх слоя */
+.viber-link span {
+  display: inline-block;
+  text-align: center;
 }
 
 .viber-link img {
-  position: absolute;
-  left: 30px;
+  /* position: absolute;
+  left: 30px; */
   width: 50px;
+
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
   transition: transform 0.3s ease;
 }
