@@ -22,9 +22,17 @@ body {
   height: 100%;
   background: url("../1613717704_2-p-krasivii-fon-dlya-internet-magazina-2.jpg")
     center/cover no-repeat;
-  background-attachment: fixed;
   z-index: -1;
   pointer-events: none;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+@supports (-webkit-touch-callout: none) {
+  .background-container {
+    background-attachment: scroll !important;
+    position: fixed;
+  }
 }
 
 /* header */
