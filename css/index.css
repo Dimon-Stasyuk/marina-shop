@@ -24,8 +24,6 @@ body {
     center/cover no-repeat;
   z-index: -1;
   pointer-events: none;
-  will-change: transform;
-  transform: translateZ(0);
 }
 
 @supports (-webkit-touch-callout: none) {
