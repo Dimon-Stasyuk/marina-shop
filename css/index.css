@@ -26,13 +26,6 @@ body {
   pointer-events: none;
 }
 
-@supports (-webkit-touch-callout: none) {
-  .background-container {
-    background-attachment: scroll !important;
-    position: fixed;
-  }
-}
-
 /* header */
 
 .logo-block {
