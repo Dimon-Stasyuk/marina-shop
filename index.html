@@ -50,16 +50,27 @@
           <strong class="center">Реквізити :</strong><br />
           💳 Актуальні реквізити для оплати<br /><br />
           ФОП Поліщук Марина Миколаївна<br /><br />
-          IBAN (АТ "ПУМБ"): 👉 UA103348510000000026005283815<br /><br />
-          ЄДРПОУ: 3479008042<br /><br />
+          IBAN (АТ "ПУМБ"): <span id="iban">UA103348510000000026005283815</span>
+          <button
+            class="copy-btn"
+            data-copy-target="iban"
+            aria-label="Скопіювати IBAN"
+          >
+            📋 Копіювати IBAN
+          </button>
+
+          ЄДРПОУ: <span id="edrpou">3479008042</span>
+          <button
+            class="copy-btn"
+            data-copy-target="edrpou"
+            aria-label="Скопіювати ЄДРПОУ"
+          >
+            📋 Копіювати ЄДРПОУ
+          </button>
+
           Призначення платежу: ❗️ОПЛАТА ЗА ТОВАР ❗️
         </p>
-        <a
-          class="payLink"
-          target="_blank"
-          href="https://www.ipay.ua/ua/p2r?sessionId=7cf3bb7c-db33-3e42-8a42-6453f4e559d8&category=1&target_fio=%D0%A4%D0%9E%D0%9F+%D0%9F%D0%BE%D0%BB%D1%96%D1%89%D1%83%D0%BA+%D0%9C%D0%B0%D1%80%D0%B8%D0%BD%D0%B0+%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%97%D0%B2%D0%BD%D0%B0&target_edrpou=3479008042&target_rr=UA103348510000000026005283815&desc=%D0%9E%D0%9F%D0%9B%D0%90%D0%A2%D0%90+%D0%97%D0%90+%D0%A2%D0%9E%D0%92%D0%90%D0%A0&bill_id=3406"
-          >Придбати товар!</a
-        >
+
         <hr />
         <p>
           <strong>🔄 Оплата</strong><br />
@@ -81,6 +92,10 @@
           ❤️ Дякуємо, що обираєте нас!
         </p>
       </div>
+
+      <!-- Toast уведомление -->
+      <div id="toast" class="toast"></div>
     </div>
+    <script src="./js/index.js"></script>
   </body>
 </html>
