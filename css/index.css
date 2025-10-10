@@ -246,29 +246,18 @@ body {
 .copy-btn:hover {
   background: linear-gradient(135deg, #feb47b, #ff7e5f);
 }
-
-.toast {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: linear-gradient(
-    135deg,
-    #ff7e5f,
-    #feb47b
-  ); /* тёплый контраст с кнопками */
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 10px;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  transform: translateY(-10px);
+.copied-text {
+  animation: highlight 0.8s ease;
 }
-.toast.show {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
+
+@keyframes highlight {
+  0% {
+    background-color: lab(93.66% -5.1 28.38 / 0.4);
+  } /* светлый кремовый */
+  50% {
+    background-color: hwb(51 62% 0% / 0.4);
+  } /* мягкий желтоватый */
+  100% {
+    background-color: transparent;
+  }
 }

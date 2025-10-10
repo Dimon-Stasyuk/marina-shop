@@ -28,22 +28,27 @@
       const el = document.getElementById(targetId);
       const text = el ? el.textContent.trim() : "";
 
-      const originalText = btn.textContent; // сохраняем исходный текст кнопки
+      const originalText = btn.textContent;
 
       copyText(text)
         .then(() => {
-          // визуальный эффект нажатия
+          // эффект нажатия кнопки
           btn.classList.add("clicked");
           setTimeout(() => btn.classList.remove("clicked"), 150);
 
-          // меняем текст на "Скопировано!"
+          // смена текста кнопки
           btn.textContent = "Скопійовано!";
           setTimeout(() => {
-            btn.textContent = originalText; // возвращаем исходный текст
+            btn.textContent = originalText;
           }, 1500);
+
+          // подсветка текста реквизита
+          if (el) {
+            el.classList.add("copied-text");
+            setTimeout(() => el.classList.remove("copied-text"), 800);
+          }
         })
         .catch(() => {
-          // при ошибке можно оставить кнопку без изменений или добавить сообщение
           btn.textContent = "Ошибка";
           setTimeout(() => {
             btn.textContent = originalText;
