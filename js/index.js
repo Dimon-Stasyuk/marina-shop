@@ -22,21 +22,33 @@
     }
   }
 
-  function showToast(message = "Скопійовано!", duration = 1500) {
-    const toast = document.getElementById("toast");
-    toast.textContent = message;
-    toast.classList.add("show");
-    setTimeout(() => toast.classList.remove("show"), duration);
-  }
-
   document.querySelectorAll(".copy-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const targetId = btn.getAttribute("data-copy-target");
       const el = document.getElementById(targetId);
       const text = el ? el.textContent.trim() : "";
+
+      const originalText = btn.textContent; // сохраняем исходный текст кнопки
+
       copyText(text)
-        .then(() => showToast("Скопійовано!"))
-        .catch(() => showToast("Не вдалося скопіювати", 1800));
+        .then(() => {
+          // визуальный эффект нажатия
+          btn.classList.add("clicked");
+          setTimeout(() => btn.classList.remove("clicked"), 150);
+
+          // меняем текст на "Скопировано!"
+          btn.textContent = "Скопійовано!";
+          setTimeout(() => {
+            btn.textContent = originalText; // возвращаем исходный текст
+          }, 1500);
+        })
+        .catch(() => {
+          // при ошибке можно оставить кнопку без изменений или добавить сообщение
+          btn.textContent = "Ошибка";
+          setTimeout(() => {
+            btn.textContent = originalText;
+          }, 1500);
+        });
     });
   });
 })();
