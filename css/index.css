@@ -252,10 +252,10 @@ body {
 
 @keyframes highlight {
   0% {
-    background-color: lab(93.66% -5.1 28.38 / 0.4);
+    background-color: lab(93.66% -5.1 28.38 / 0.6);
   } /* светлый кремовый */
   50% {
-    background-color: hwb(51 62% 0% / 0.4);
+    background-color: hwb(51 62% 0% / 0.6);
   } /* мягкий желтоватый */
   100% {
     background-color: transparent;
