@@ -74,6 +74,11 @@ body {
   max-width: 540px;
 }
 
+.left {
+  position: absolute;
+  left: 20px;
+}
+
 .viber-link {
   position: relative;
   display: flex;
@@ -92,26 +97,28 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   letter-spacing: 0.5px;
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.telegram-link {
-  margin-top: 20px;
-  align-items: center;
-  background: linear-gradient(135deg, #0088cc, #006699); /* цвета Telegram */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  letter-spacing: 0.5px;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-}
-
-.left {
+.viber-link::after {
+  content: "";
   position: absolute;
-  left: 20px;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: skewX(-25deg);
+  transition: left 0.5s ease;
+}
+
+.viber-link:hover {
+  transform: scale(1.02); /* лёгкое увеличение */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .viber-link:hover::after {
-  background: rgba(255, 255, 255, 0.05); /* светлый слой при наведении */
+  left: 125%; /* анимация блеска слева направо */
 }
 
 .viber-link span {
@@ -124,6 +131,16 @@ body {
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
   transition: transform 0.3s ease;
   animation: rotateLight 1s infinite linear; /* лёгкое вращение */
+}
+
+.telegram-link {
+  margin-top: 20px;
+  align-items: center;
+  background: linear-gradient(135deg, #0088cc, #006699); /* цвета Telegram */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 @media (max-width: 480px) {
