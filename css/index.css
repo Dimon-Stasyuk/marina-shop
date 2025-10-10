@@ -258,13 +258,14 @@ body {
   right: 20px;
   background: linear-gradient(
     135deg,
-    #d88146,
-    #e09e45
+    #ff7e5f,
+    #feb47b
   ); /* тёплый контраст с кнопками */
   color: #fff;
   padding: 12px 20px;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   opacity: 0;
   pointer-events: none;
