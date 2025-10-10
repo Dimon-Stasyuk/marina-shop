@@ -74,6 +74,10 @@ body {
   max-width: 540px;
 }
 
+.payment-title {
+  display: inline-block;
+}
+
 .left {
   position: absolute;
   left: 20px;
