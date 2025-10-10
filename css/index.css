@@ -266,7 +266,7 @@ body {
     #2575fc
   ); /* фиолетово-синий градиент */
   color: #fff;
-  transition: transform 0.5s, background 0.3s;
+  transition: background 0.3s;
 }
 
 #copy-all-btn:hover {
@@ -282,11 +282,10 @@ body {
   cursor: pointer;
   background: linear-gradient(135deg, #ff7e5f, #feb47b);
   color: #fff;
-  transition: transform 0.5s, background 0.5s;
+  transition: background 0.5s;
 }
 .copy-btn:hover {
   background: linear-gradient(135deg, #feb47b, #ff7e5f);
-  transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 .copied-text {
